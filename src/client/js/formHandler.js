@@ -13,6 +13,8 @@ function handleSubmit(event) {
     .then(res => res.json())
     .then(function(res) {
         document.getElementById('results').innerHTML = res.weather[0].description
+
+        Object.keys(res).forEach(e => console.log(`key=${e}  value=${res[e]}`));
     })
 }
 
